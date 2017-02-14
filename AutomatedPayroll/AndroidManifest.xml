@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.automatedpayrol" >
+    
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <application
+        android:allowBackup="true"
+        
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.automatedpayrol.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+ 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.automatedpayrol.EmployeeLogin"
+            
+            android:parentActivityName="com.example.automatedpayrol.MainActivity" 
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.automatedpayrol.MainActivity" />
+        </activity>
+        
+         <activity
+            android:name="com.example.automatedpayrol.ImageUpload"
+            
+            android:parentActivityName="com.example.automatedpayrol.EmployeeLogin" 
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.automatedpayrol.MainActivity" />
+        </activity>
+       
+          <activity
+            android:name="com.example.automatedpayrol.LocationDB"
+            
+            android:parentActivityName="com.example.automatedpayrol.ImageUpload" 
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.automatedpayrol.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.automatedpayrol.AndroidGPSTrackingActivity"
+            
+            android:parentActivityName="com.example.automatedpayrol.LocationDB" 
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.automatedpayrol.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.automatedpayrol.EmployeeHome"
+            
+            android:parentActivityName="com.example.automatedpayrol.AndroidGPSTrackingActivity" 
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.automatedpayrol.MainActivity" />
+        </activity>
+    </application>
+ 
+</manifest>
